@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  23 JAN 2015 16:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  27 JAN 2015 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -750,10 +750,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 752FB31421E2D2D073275B96990C6E6B;410.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  10283 strings out of 493629
@@ -773,7 +769,7 @@ fb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (7 pages, 73659 bytes).
+Output written on paper.pdf (7 pages, 73741 bytes).
 PDF statistics:
  169 PDF objects out of 1000 (max. 8388607)
  145 compressed objects within 2 object streams
