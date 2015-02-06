@@ -1,0 +1,242 @@
+\subsection{Question 1}
+
+\subsubsection{Question 1.1}
+\subsubsection{Part A}
+
+\begin{enumerate}
+
+\item double column 1 (postmultiply):
+  \begin{equation}
+    X\{1\} = 
+    \begin{pmatrix}
+      2 & 0 & 0 & 0 \\
+      0 & 1 & 0 & 0 \\
+      0 & 0 & 1 & 0 \\
+      0 & 0 & 0 & 1
+    \end{pmatrix}
+  \end{equation}
+
+\item halve row 3 (premultiply):
+
+  \begin{equation}
+    X\{2\} = 
+    \begin{pmatrix}
+      1 & 0 & 0 & 0 \\
+      0 & 1 & 0 & 0 \\
+      0 & 0 & 0.5 & 0 \\
+      0 & 0 & 0 & 1
+    \end{pmatrix}
+  \end{equation}
+
+\item add row 3 to row 1 (premultiply):
+
+  \begin{equation}
+    X\{3\} = 
+    \begin{pmatrix}
+      1 & 0 & 1 & 0 \\
+      0 & 1 & 0 & 0 \\
+      0 & 0 & 1 & 0 \\
+      0 & 0 & 0 & 1
+    \end{pmatrix}
+  \end{equation}
+
+\item interchange columns 1 and 4 (postmultiply):
+
+  \begin{equation}
+    X\{4\} = 
+    \begin{pmatrix}
+      0 & 0 & 0 & 1 \\
+      0 & 1 & 0 & 0 \\
+      0 & 0 & 1 & 0 \\
+      1 & 0 & 0 & 0
+    \end{pmatrix}
+  \end{equation}
+
+\item subtract row 2 from each of the other rows (premultiply):
+
+  \begin{equation}
+    X\{5\} = 
+    \begin{pmatrix}
+      1 & -1 & 0 & 0 \\
+      0 & 1 & 0 & 0 \\
+      0 & -1 & 1 & 0 \\
+      0 & -1 & 0 & 1
+    \end{pmatrix}
+  \end{equation}
+
+\item replace column 4 by column 3 (postmultiply):
+
+  \begin{equation}
+    X\{6\} = 
+    \begin{pmatrix}
+      1 & 0 & 0 & 0 \\
+      0 & 1 & 0 & 0 \\
+      0 & 0 & 1 & 1 \\
+      0 & 0 & 0 & 0
+    \end{pmatrix}
+  \end{equation}
+
+\item delete column 1 (postmultiply):
+
+  \begin{equation}
+    X\{7\} = 
+    \begin{pmatrix}
+      0 & 0 & 0 \\
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      0 & 0 & 1
+    \end{pmatrix}
+  \end{equation}
+
+\end{enumerate}
+
+The result as a product of eight matrices is as follows:
+
+\begin{equation}
+  \boxed{M = X\{5\}*X\{3\}*X\{2\}*B*X\{1\}*X\{4\}*X\{6\}*X\{7\}}
+  \label{eq:1a}
+\end{equation}
+
+\newpage
+\subsubsection{Part B}
+
+(\ref{eq:1a}) can be rewritten as a product of three matrices (same B) as follows:
+
+\begin{equation}
+  A = X\{5\}*X\{3\}*X\{2\}
+\end{equation}
+
+\begin{equation}
+  A = 
+  \begin{pmatrix}
+    1 & -1 & 0.5 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & -1 & 0.5 & 0\\
+    0 & -1 & 0 & 1
+  \end{pmatrix}
+\end{equation}
+
+
+\begin{equation}
+  C = X\{1\}*X\{4\}*X\{6\}*X\{7\}
+\end{equation}
+
+\begin{equation}
+  C = 
+  \begin{pmatrix}
+    0 & 0 & 0 \\
+    1 & 0 & 0 \\
+    0 & 1 & 1 \\
+    0 & 0 & 0
+  \end{pmatrix}
+\end{equation}
+
+
+This results in:
+
+\begin{equation}
+  \boxed{M = A*B*C}
+\end{equation}
+
+\newpage
+\subsubsection{Matlab Code for Parts A \& B}
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../a1_q1_1.m}
+
+\newpage
+\subsubsection{Question 2.3}
+
+Let \(A \in \mathbbm{C}^{m \times m} \) be hermitian. By definition \(A = A^{*} \).
+
+\subsubsection{Part A}
+
+Prove that all eigenvalues of \(A\) are real. Assume \( \lambda \) is an eigenvalue of \(A\) and \(v\) is eigenvector associated with \( \lambda \). The proof is as follows:
+
+\begin{equation}
+  \lambda \langle v,v \rangle 
+  = \langle \lambda v,v \rangle 
+  = \langle Av,v \rangle
+  = \langle v,A^{*}v \rangle
+  = \langle v,Av \rangle
+  = \langle v,\lambda v \rangle
+  = \bar{\lambda} \langle v,v \rangle
+\end{equation}
+
+\begin{equation}
+  \lambda \langle v,v \rangle
+  = \bar{\lambda} \langle v,v \rangle
+\label{eq:2.1}
+\end{equation}
+
+Positive-definiteness says,
+
+\begin{equation}
+  \langle x,x \rangle \geq 0
+\end{equation}
+\begin{equation}
+  \langle x,x \rangle = 0 \Rightarrow x = 0
+\end{equation}
+
+By definition eigenvectors cannot be the zero vector. Therefore,
+
+\begin{equation}
+  \langle v,v \rangle \ne 0
+\end{equation}
+
+This means we can divide both sides of (\ref{eq:2.1}) by \( \langle v,v \rangle \). This leaves,
+
+\begin{equation}
+  \lambda = \bar{\lambda}
+\end{equation}
+
+By definition, for a real scalar \(z\), \(\bar{z} = z\). Therefore, \( \lambda \) is real valued and since we choose \(\lambda\) to be an arbitrary eigenvalue of \(A\), all eigenvalues of \(A\) are real.
+
+\newpage
+\subsubsection{Part B}
+
+Prove that if \(x\) and \(y\) are eigenvectors corresponding to distinct eigenvalues, then \(x\) and \(y\) are orthogonal. Note, a pair of vectors \(w_1\) and \(w_2\) are orthogonal if \( \langle w_1,w_2 \rangle = 0\). We will therefore prove orthogonality of \(x\) and \(y\) by proving the equivalent statement: \( \langle x,y \rangle = 0 \). The proof is as follows:
+\\
+\\
+\indent Assume \(\lambda\) is the eigenvalue associated with \(x\), \(\mu\) is the eigenvalue associated with \(y\), and \(\lambda \ne \mu\). Then,
+
+\begin{equation}
+  \lambda \langle x,y \rangle
+  = \langle \lambda x,y \rangle
+  = \langle Ax,y \rangle
+  = \langle x,A^{*}y \rangle
+  = \langle x,Ay \rangle
+  = \langle x,\mu y \rangle
+  = \bar{\mu} \langle x,y \rangle
+\end{equation}
+
+From the previous proof we know that \(\bar{\mu} = \mu\) Therefore we are left with the following equation,
+
+\begin{equation}
+  \lambda \langle x,y \rangle = \mu \langle x,y \rangle
+\end{equation}
+
+We can then reorder terms,
+
+\begin{equation}
+  \lambda \langle x,y \rangle - \mu \langle x,y \rangle = 0
+\end{equation}
+
+This reduces to,
+
+\begin{equation}
+  (\lambda - \mu) \langle x,y \rangle = 0
+\end{equation}
+
+Allowing \( (\lambda -\mu) = 0\) would imply \( \lambda = \mu \). However, this contradicts our assumption that \(\lambda\) and \(\mu\) are distinct; \( \lambda \ne \mu \). Therefore, \( \langle x,y \rangle = 0 \). This proves the equivalent statement that eigenvectors \(x\) and \(y\) are orthogonal.
+
+
+\newpage
+\subsection{Question 2}
+
+\newpage
+\subsubsection{Part A}
+
+\newpage
+\subsubsection{Part B}
+
+\newpage
+\subsection{Question 3}
