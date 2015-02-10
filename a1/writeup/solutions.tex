@@ -288,12 +288,7 @@ The proof is as follows,
 
 \begin{eqnarray}
   ||Qx|| &=& ||x|| \\
-  \sqrt{\langle Qx,Qx \rangle} &=& \sqrt{\langle x,x \rangle}
-\end{eqnarray}
-
-We can drop the square roots on both sides of the equation after the arrow and continue,
-
-\begin{eqnarray}
+  \sqrt{\langle Qx,Qx \rangle} &=& \sqrt{\langle x,x \rangle} \\
   \langle Qx,Qx \rangle &=& \langle x,x \rangle \\
   x'Q'Qx &=& x'x
   \label{eq:q2_b}
@@ -331,11 +326,13 @@ Using the previous proof, we must now show that \(Q\) from Section~\ref{sec:q2_p
 A matrix \(A\) is orthogonal if \(A' = A^{-1}\).
 
 In Section~\ref{sec:q2_partA} we showed that \(Q'Q = I\).
+Note, by definition \(Q^{-1}Q = I\).
 The proof is as follows,
 
 \begin{eqnarray}
-  Q'Q &=& I = Q^{-1}Q \\
-  Q'Q &=& Q^{-1}Q
+  Q'Q &=& I \\
+  &=& Q^{-1}Q \\
+  &=& Q^{-1}Q
 \end{eqnarray}
 
 Therefore, \(Q' = Q^{-1}\).
