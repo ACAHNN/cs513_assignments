@@ -145,11 +145,14 @@ This results in:
 \newpage
 \subsubsection{Question 2.3}
 
-Let \(A \in \mathbbm{C}^{m \times m} \) be hermitian. By definition \(A = A^{*} \).
+Let \(A \in \mathbbm{C}^{m \times m} \) be hermitian.
+By definition \(A = A^{*} \).
 
 \subsubsection{Part A}
 
-Prove that all eigenvalues of \(A\) are real. Assume \( \lambda \) is an eigenvalue of \(A\) and \(v\) is eigenvector associated with \( \lambda \). The proof is as follows:
+Prove that all eigenvalues of \(A\) are real.
+Assume \( \lambda \) is an eigenvalue of \(A\) and \(v\) is eigenvector associated with \( \lambda \).
+The proof is as follows:
 
 \begin{equation}
   \lambda \langle v,v \rangle 
@@ -176,27 +179,34 @@ Positive-definiteness says,
   \langle x,x \rangle = 0 \Rightarrow x = 0
 \end{equation}
 
-By definition eigenvectors cannot be the zero vector. Therefore,
+By definition eigenvectors cannot be the zero vector.
+Therefore,
 
 \begin{equation}
   \langle v,v \rangle \ne 0
 \end{equation}
 
-This means we can divide both sides of (\ref{eq:2.1}) by \( \langle v,v \rangle \). This leaves,
+This means we can divide both sides of (\ref{eq:2.1}) by \( \langle v,v \rangle \).
+This leaves,
 
 \begin{equation}
   \lambda = \bar{\lambda}
 \end{equation}
 
-By definition, for a real scalar \(z\), \(\bar{z} = z\). Therefore, \( \lambda \) is real valued and since we choose \(\lambda\) to be an arbitrary eigenvalue of \(A\), all eigenvalues of \(A\) are real.
+By definition, for a real scalar \(z\), \(\bar{z} = z\).
+Therefore, \( \lambda \) is real valued and since we choose \(\lambda\) to be an arbitrary eigenvalue of \(A\), all eigenvalues of \(A\) are real.
 
 \newpage
 \subsubsection{Part B}
 
-Prove that if \(x\) and \(y\) are eigenvectors corresponding to distinct eigenvalues, then \(x\) and \(y\) are orthogonal. Note, a pair of vectors \(w_1\) and \(w_2\) are orthogonal if \( \langle w_1,w_2 \rangle = 0\). We will therefore prove orthogonality of \(x\) and \(y\) by proving the equivalent statement: \( \langle x,y \rangle = 0 \). The proof is as follows:
+Prove that if \(x\) and \(y\) are eigenvectors corresponding to distinct eigenvalues, then \(x\) and \(y\) are orthogonal.
+Note, a pair of vectors \(w_1\) and \(w_2\) are orthogonal if \( \langle w_1,w_2 \rangle = 0\).
+We will therefore prove orthogonality of \(x\) and \(y\) by proving the equivalent statement: \( \langle x,y \rangle = 0 \).
+The proof is as follows:
 \\
 \\
-\indent Assume \(\lambda\) is the eigenvalue associated with \(x\), \(\mu\) is the eigenvalue associated with \(y\), and \(\lambda \ne \mu\). Then,
+\indent Assume \(\lambda\) is the eigenvalue associated with \(x\), \(\mu\) is the eigenvalue associated with \(y\), and \(\lambda \ne \mu\).
+Then,
 
 \begin{equation}
   \lambda \langle x,y \rangle
@@ -208,7 +218,8 @@ Prove that if \(x\) and \(y\) are eigenvectors corresponding to distinct eigenva
   = \bar{\mu} \langle x,y \rangle
 \end{equation}
 
-From the previous proof we know that \(\bar{\mu} = \mu\) Therefore we are left with the following equation,
+From the previous proof we know that \(\bar{\mu} = \mu\).
+Therefore we are left with the following equation,
 
 \begin{equation}
   \lambda \langle x,y \rangle = \mu \langle x,y \rangle
@@ -226,17 +237,123 @@ This reduces to,
   (\lambda - \mu) \langle x,y \rangle = 0
 \end{equation}
 
-Allowing \( (\lambda -\mu) = 0\) would imply \( \lambda = \mu \). However, this contradicts our assumption that \(\lambda\) and \(\mu\) are distinct; \( \lambda \ne \mu \). Therefore, \( \langle x,y \rangle = 0 \). This proves the equivalent statement that eigenvectors \(x\) and \(y\) are orthogonal.
+Allowing \( (\lambda -\mu) = 0\) would imply \( \lambda = \mu \).
+However, this contradicts our assumption that \(\lambda\) and \(\mu\) are distinct; \( \lambda \ne \mu \).
+Therefore, \( \langle x,y \rangle = 0 \).
+This proves the equivalent statement that eigenvectors \(x\) and \(y\) are orthogonal.
 
 
 \newpage
 \subsection{Question 2}
 
-\newpage
+Let \(Q\) by an \(m \times m\) real matrix that satisfies, for every vector \(x \in \mathbbm{R}^{m}\),
+
+\begin{equation}
+  ||Qx|| = ||x||
+\end{equation}
+
 \subsubsection{Part A}
+\label{sec:q2_partA}
+Show that 1 is the only eigenvalue of \(Q'Q\), i.e., show that \(\sigma(Q'Q) = \{1\}\).
+
+To prove this we will show that \(Q'Q = I\), i.e., \(Q'Q\) is the identity matrix.
+This is equivalent because 1 is the only eigenvalue of any indentity matrix.
+To find the eigenvalues of \(I\) we must satisfy,
+
+\begin{equation}
+  \det(I - \lambda I)=0
+\end{equation}
+
+Since \(I\) is a diagonal matrix the matrix \(I - \lambda I\) will also be diagonal.
+The diagonal entries will be of the form \(1 - \lambda\).
+The determinant of \(I - \lambda I\) is the product of its diagonal entries.
+Which means the characteristic polynomial is of the form,
+
+\begin{equation}
+  {(1 - \lambda)}_1 {(1 - \lambda)}_2 \ldots {(1 - \lambda)}_m = 0
+\end{equation}
+
+Therefore, the \(\lambda\)'s all equal 1 and these are the eigenvalues of \(I\).
+Concisely,
+
+\begin{equation}
+  \boxed{p(I) = \{1\}}
+  \label{eq:q2_a}
+\end{equation}
+
+Now we will prove \(Q'Q = I\).
+We know that \(||x|| = \sqrt{\langle x,x \rangle}\).
+We will assume \(x \ne 0\), as this is a degenerate case.
+The proof is as follows,
+
+\begin{eqnarray}
+  ||Qx|| &=& ||x|| \\
+  \sqrt{\langle Qx,Qx \rangle} &=& \sqrt{\langle x,x \rangle}
+\end{eqnarray}
+
+We can drop the square roots on both sides of the equation after the arrow and continue,
+
+\begin{eqnarray}
+  \langle Qx,Qx \rangle &=& \langle x,x \rangle \\
+  x'Q'Qx &=& x'x
+  \label{eq:q2_b}
+\end{eqnarray} 
+
+In order to satisfy (\ref{eq:q2_b}), \(Q'Q\) must equal the identity matrix, i.e., \(Q'Q = I\).
+We have already shown the only eigenvalue of the identity matrix is 1.
+Therefore, (\ref{eq:q2_a}) implies,
+
+\begin{eqnarray}
+  \boxed{p(Q'Q) = \{1\}}
+\end{eqnarray}
+
+This concludes the proof.
 
 \newpage
 \subsubsection{Part B}
 
+We must first prove that \(Q'Q\) is symmetric for any matrix \(Q\).
+A matrix is symmetric if \(A = A'\).
+To do this we will define \(B = Q'Q\).
+Then,
+
+\begin{eqnarray}
+  B' &=& (Q'Q)' \\
+  &=& Q'Q'' \\
+  &=& Q'Q \\
+  &=& B
+\end{eqnarray}
+
+We have shown \(B = B'\) which is the definition of symmetric. 
+Therefore, \(Q'Q\) is symmetric for any \(Q\). 
+
+Using the previous proof, we must now show that \(Q\) from Section~\ref{sec:q2_partA} is orthogonal.
+A matrix \(A\) is orthogonal if \(A' = A^{-1}\).
+
+In Section~\ref{sec:q2_partA} we showed that \(Q'Q = I\).
+The proof is as follows,
+
+\begin{eqnarray}
+  Q'Q &=& I = Q^{-1}Q \\
+  Q'Q &=& Q^{-1}Q
+\end{eqnarray}
+
+Therefore, \(Q' = Q^{-1}\).
+Since the transpose of \(Q\) is equal to the inverse of \(Q\), by definition \(Q\) is orthogonal.
+
 \newpage
 \subsection{Question 3}
+
+The {\em sloppy\_qr.m} algorithm executes a loop \(n\) times.
+Within the loop we have operations that have complexity \(n\), \(2n\), and \(2n^{3}\).
+The complexity of the algorithm is,
+
+\begin{eqnarray}
+  n(2n^{3}+3n) \Rightarrow \boxed{2n^{4}+3n^2}
+\end{eqnarray}
+
+Therefore, the big-O complexity is \(2n^{4}\) or O(\(n^4\)).
+\\
+\\
+The code for the experiments:
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../a1_q3.m}

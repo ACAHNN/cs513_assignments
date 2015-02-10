@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  6 FEB 2015 17:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  9 FEB 2015 18:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,11 +704,26 @@ LaTeX Font Info:    Try loading font information for U+bbm on input line 148.
 bm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [6]
-Underfull \hbox (badness 10000) in paragraph at lines 196--200
+Underfull \hbox (badness 10000) in paragraph at lines 202--210
 
  []
 
-[7] [8] [9] [10])
+[7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
+
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 359--359
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 359--359
+[][][][][][][] 
+ []
+
+(../a1_q3.m))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
  [11]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
@@ -719,13 +734,13 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: F0228329075AED3B0D96E95EEBA46211;846.
  ) 
 Here is how much of TeX's memory you used:
- 10341 strings out of 493629
- 154746 string characters out of 3134964
- 275893 words of memory out of 3000000
- 13388 multiletter control sequences out of 15000+200000
+ 10369 strings out of 493629
+ 155070 string characters out of 3134964
+ 280359 words of memory out of 3000000
+ 13395 multiletter control sequences out of 15000+200000
  49291 words of font info for 88 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 44i,7n,43p,436b,1705s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,43p,280b,1705s stack positions out of 5000i,500n,10000p,200000b,50000s
  </u/c/a/cahn/.texlive2011/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk>{
 /afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/public/
@@ -738,10 +753,10 @@ usyr.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf
 -dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (11 pages, 88330 bytes).
+Output written on paper.pdf (11 pages, 96483 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 88 named destinations out of 1000 (max. 500000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 106 named destinations out of 1000 (max. 500000)
  105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
