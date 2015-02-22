@@ -1,0 +1,370 @@
+\subsection{Question 1}
+Given the matrix 
+
+\begin{eqnarray}
+  A = 
+  \begin{pmatrix}
+    1 & 2 \\
+    -1 & 2
+  \end{pmatrix}
+\end{eqnarray}
+
+\subsubsection{Part A}
+
+The spectrum of \(A\) is found by finding the eigenvalues of \(A\).
+
+\begin{eqnarray}
+  A - \lambda I &=& 0 \\
+  \begin{bmatrix}
+    1 & 2 \\
+    -1 & 2
+  \end{bmatrix}
+  -
+  \begin{bmatrix}
+    \lambda & 0 \\
+    0 & \lambda
+  \end{bmatrix}
+  &=& 0 \\
+  \begin{bmatrix}
+    1-\lambda & 2 \\
+    -1 & 2-\lambda
+  \end{bmatrix}
+  &=& 0 \\
+  ((1-\lambda)(2-\lambda)) + 2 &=& 0 \\
+  \lambda^{2} - 3\lambda + 4 &=& 0
+\end{eqnarray}
+
+Now we simply factor to find the eigenvalues.
+
+\begin{eqnarray}
+  \lambda &=& \frac{3 \pm \sqrt{-7}}{2} \\
+  \lambda &=& \frac{3 \pm \sqrt{7}i}{2}
+\end{eqnarray}
+
+Therefore the spectrum of \(A\), 
+\begin{eqnarray}
+  \boxed{\sigma(A) = \frac{3 \pm \sqrt{7}i}{2}}
+\end{eqnarray}
+
+The spectral radius of \(A\) is,
+
+\begin{eqnarray}
+  p(A) &=& \max \{\sigma(A)\} \\
+  \text{Therefore, using } \\
+  \lambda &=& \frac{3 - \sqrt{7}i}{2} \\
+  \text{and converting to the reals } \\
+  &=& \sqrt{\left(\frac{3 \pm \sqrt{7}i}{2}\right)^2} \\
+  &=& \sqrt{\frac{9}{4} + \frac{7}{4}} \\
+  &=& \sqrt{\frac{16}{4}} \\
+  &=& \sqrt{4} \\
+  \boxed{p(A) = 2}
+\end{eqnarray}
+
+\subsubsection{Part B}
+\begin{eqnarray}
+  || A ||_1 = \max \{2,4\} = \boxed{4} \\
+  || A ||_{\inf} = \max \{3,3\} = \boxed{3} \\
+  || A ||_2 = \sqrt{ \lambda_{\max} (A'A)}
+\end{eqnarray}
+
+First we find the spectrum of \(A'A\),
+
+\begin{eqnarray}
+  A'A &=&
+  \begin{bmatrix}
+    1 & -1 \\
+    2 & 2
+  \end{bmatrix}
+  \begin{bmatrix}
+    1 & 2 \\
+    -1 & 2
+  \end{bmatrix}
+  \\
+  &=&
+  \begin{bmatrix}
+    2 & 0 \\
+    0 & 8
+  \end{bmatrix}
+\end{eqnarray}
+
+The eigenvalues are simply the diagonal entries meaning,
+
+\begin{eqnarray}
+  \sigma(A'A) = \{2,8\} \\
+  \text{Therefore, }
+  ||A||_2 &=& \sqrt{\max \{2,8\}} \\
+  ||A||_2 &=& \boxed{\sqrt{8}}
+\end{eqnarray}
+
+\subsubsection{Part C}
+The left singular vectors of \(A\) are eigenvectors of \(AA'\); we will denote this \(U\).
+The right singular vectors of \(A\) are eigenvectors of \(A'A\); we will dentote this \(V\).
+The singular values of \(A\) are the square roots of the non-zero eigenvalues of \(A'A\) and \(AA'\); we will denote this \(S\).
+
+Note,
+
+\begin{eqnarray}
+  AA' = 
+  \begin{bmatrix}
+    5 & 3 \\
+    3 & 5
+  \end{bmatrix}
+  \text{,   }
+  A'A = 
+  \begin{bmatrix}
+    2 & 0 \\
+    0 & 8
+  \end{bmatrix}
+\end{eqnarray}
+
+First, we will find the left singular vectors of \(A\).
+The eigenvalues of \(AA'\) are \(\lambda = 2,8\).
+We will now find eigenvectors for \(AA'\).
+
+Case: \(\lambda = 2\),
+\begin{eqnarray}
+  \begin{bmatrix}
+    3 & 3 \\
+    3 & 3
+  \end{bmatrix}
+  \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+  \end{bmatrix}
+  = 0 \\
+  \text{A solution: }
+  X = 
+  \begin{bmatrix}
+    1 \\
+    -1
+  \end{bmatrix}
+\end{eqnarray}
+
+Case: \(\lambda = 8 \),
+\begin{eqnarray}
+  \begin{bmatrix}
+    -3 & 3 \\
+    3 & -3
+  \end{bmatrix}
+  \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+  \end{bmatrix}
+  = 0 \\
+  \text{A solution: }
+  X = 
+  \begin{bmatrix}
+    1 \\
+    1
+  \end{bmatrix}
+\end{eqnarray}
+
+Therefore,
+\begin{eqnarray}
+  U = 
+  \begin{bmatrix}
+    1 & 1 \\
+    -1 & 1
+  \end{bmatrix}
+\end{eqnarray}
+
+Next, we will find the right singular vectors of \(A\).
+The eigenvalues of \(A'A\) are \(\lambda = 2,8\)
+We will now find eigenvectors for \(A'A\).
+
+Case: \(\lambda = 2\),
+\begin{eqnarray}
+  \begin{bmatrix}
+    0 & 0 \\
+    0 & 6
+  \end{bmatrix}
+  \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+  \end{bmatrix}
+  = 0 \\
+  \text{A solution: }
+  X = 
+  \begin{bmatrix}
+    1 \\
+    0
+  \end{bmatrix}
+\end{eqnarray}
+
+Case: \(\lambda = 8 \),
+\begin{eqnarray}
+  \begin{bmatrix}
+    -6 & 0 \\
+    0 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+  \end{bmatrix}
+  = 0 \\
+  \text{A solution: }
+  X = 
+  \begin{bmatrix}
+    0 \\
+    1
+  \end{bmatrix}
+\end{eqnarray}
+
+Therefore,
+\begin{eqnarray}
+  V = 
+  \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{bmatrix}
+\end{eqnarray}
+
+The singular values of \(A\) are the square roots of the eigenvalues of \(AA'\) and \(A'A\).
+Therefore,
+\begin{eqnarray}
+  S = 
+  \begin{bmatrix}
+    \sqrt{2} & 0 \\
+    0 & \sqrt{8}
+  \end{bmatrix}
+\end{eqnarray}
+
+The singular value decomposition of \(A\) is given by \(A = USV'\).
+
+\begin{eqnarray}
+  A &=& 
+  \begin{bmatrix}
+    1 & 1 \\
+    -1 & 1
+  \end{bmatrix}
+  \begin{bmatrix}
+    \sqrt{2} & 0 \\
+    0 & \sqrt{8}
+  \end{bmatrix}
+  \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{bmatrix}
+  \\
+  A &=&
+  \begin{bmatrix}
+    1.4142 & 2.8284 \\
+    -1.4142 & 2.8282
+  \end{bmatrix}
+\end{eqnarray}
+
+The matrix above is in fact not \(A\), but it is only off by a scalar. If we divide by \(1.4142\) we get the original matrix \(A\). Therefore we will encorporate this scalar division into \(U\). Now,
+
+\begin{eqnarray}
+  U = 
+  \begin{bmatrix}
+    0.7071 & 0.7071 \\
+    -0.7071 & 0.7071
+  \end{bmatrix}
+\end{eqnarray}
+
+In full,
+
+\begin{eqnarray}
+  U = 
+  \begin{bmatrix}
+    0.7071 & 0.7071 \\
+    -0.7071 & 0.7071
+  \end{bmatrix}
+  \text{, }
+  S = 
+  \begin{bmatrix}
+    \sqrt{2} & 0 \\
+    0 & \sqrt{8}
+  \end{bmatrix}
+  \text{, }
+  V = 
+  \begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+  \end{bmatrix}
+\end{eqnarray}
+\newpage
+\subsection{Question 2}
+\subsubsection{Part A}
+\subsubsection{Part B}
+\subsubsection{Part C}
+\subsubsection{Part D}
+\subsubsection{Part E}
+
+\newpage
+\subsection{Question 3}
+\subsubsection{Part A}
+\subsubsection{Part B}
+
+\newpage
+\subsection{Question 4}
+
+\(QR\) factor the matrix \(Z\) where matrix \(Z\) is,
+
+\begin{eqnarray}
+  Z = 
+  \begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    7 & 8 & 7 \\
+    4 & 2 & 3 \\
+    4 & 2 & 2
+  \end{bmatrix}
+\end{eqnarray}
+  
+This will require three iterations.
+Iteration 1:
+
+\begin{eqnarray}
+  x =
+  \begin{bmatrix}
+    1 \\
+    4 \\
+    7 \\
+    4 \\
+    4
+  \end{bmatrix}
+  \text{, }
+  y = 
+  \begin{bmatrix}
+    9.8995 \\
+    0 \\
+    0 \\
+    0 \\
+    0
+  \end{bmatrix}
+  \\
+  w = 
+  \begin{bmatrix}
+    -0.6704 \\
+    0.3013 \\
+    0.5273 \\
+    0.3013 \\
+    0.3013
+  \end{bmatrix}
+  H = 
+  \begin{bmatrix}
+    0.1010 &   0.4041 &   0.7071 &   0.4041 &   0.4041 \\
+    0.4041 &   0.8184 &  -0.3178 &  -0.1816 &  -0.1816 \\
+    0.7071 &  -0.3178 &   0.4438 &  -0.3178 &  -0.3178 \\
+    0.4041 &  -0.1816 &  -0.3178 &   0.8184 &  -0.1816 \\
+    0.4041 &  -0.1816 &  -0.3178 &  -0.1816 &   0.8184 \\
+  \end{bmatrix}
+  \\
+  Q =
+  \begin{bmatrix}
+    0.1010 &   0.4041 &   0.7071 &   0.4041 &   0.4041 \\
+    0.4041 &   0.8184 &  -0.3178 &  -0.1816 &  -0.1816 \\
+    0.7071 &  -0.3178 &   0.4438 &  -0.3178 &  -0.3178 \\
+    0.4041 &  -0.1816 &  -0.3178 &   0.8184 &  -0.1816 \\
+    0.4041 &  -0.1816 &  -0.3178 &  -0.1816 &   0.8184 \\
+  \end{bmatrix}
+
+
+\newpage
+\subsection{Question 5}
+
+
+
+%\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../a1_q3.m}
