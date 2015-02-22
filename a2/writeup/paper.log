@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  22 FEB 2015 15:05
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  22 FEB 2015 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,8 +689,8 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: B25E6CAE412C6A28F3C51D2094D0D0E7;996.
  ) 
 Here is how much of TeX's memory you used:
- 9638 strings out of 493629
- 146089 string characters out of 3134964
+ 9640 strings out of 493629
+ 146115 string characters out of 3134964
  236542 words of memory out of 3000000
  12751 multiletter control sequences out of 15000+200000
  48293 words of font info for 82 fonts, out of 3000000 for 9000
@@ -707,10 +707,10 @@ ol/usyr.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1
 /urw/times/utmb8a.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/te
 xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (9 pages, 77818 bytes).
+Output written on paper.pdf (9 pages, 80294 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
- 45 named destinations out of 1000 (max. 500000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
  129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
