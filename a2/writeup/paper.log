@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.13)  22 FEB 2015 22:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.13)  23 FEB 2015 00:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**paper
+**paper.tex
 (./paper.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 2 languages loaded.
@@ -610,48 +610,65 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
- [2] [3] [4] [5] [6]
-[7] [8] [9]
+ [2] [3] [4] [5]
+Overfull \hbox (2.96138pt too wide) in paragraph at lines 343--345
+\T1/ptm/m/n/12 ture is thus, $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 ^^U; v\OT1/
+ztmcm/m/n/12 )[]\OML/ztmcm/m/it/12 A[]A[]\OT1/ztmcm/m/n/12 ([]\OML/ztmcm/m/it/1
+2 ; v\OT1/ztmcm/m/n/12 )[]\OML/ztmcm/m/it/12 A$\T1/ptm/m/n/12 ;
+ []
 
-! Package Listings Error: File `../a2_q4(.m)' not found.
+[6] [7] [8] [9] [10] [11] [12]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 652.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: m)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 652--652
+[][][][][][][] 
+ []
 
-Enter file name: 
-! Interruption.
-<to be read again> 
-                   }
-l.514 ...spaces=false,language=Matlab]{../a2_q4.m}
-                                                  ^^M
-? Q
-OK, entering \batchmode...
-! Undefined control sequence.
-\\lst@inputlisting ...}}\reserved@a }\lst@doendpe 
-                                                  \@newlistfalse \ignorespaces 
-l.514 ...spaces=false,language=Matlab]{../a2_q4.m}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
- [10]
-! Interruption.
-l.389578791 
-            
-? Q
-OK, entering \batchmode...
+Overfull \hbox (6.0pt too wide) in paragraph at lines 652--652
+[][][][][][][] 
+ []
 
-! Interruption.
-l.400156633 
-            
-? q
-OK, entering \batchmode...
+(../a2_q4.m
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 9.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+))
+[13])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
+ (./paper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
+Package rerunfilecheck Info: File `paper.out' has not changed.
+(rerunfilecheck)             Checksum: B25E6CAE412C6A28F3C51D2094D0D0E7;996.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 62.
+ ) 
+Here is how much of TeX's memory you used:
+ 10535 strings out of 495028
+ 153883 string characters out of 6181496
+ 263825 words of memory out of 5000000
+ 13485 multiletter control sequences out of 15000+600000
+ 52183 words of font info for 87 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 44i,12n,45p,308b,1705s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (14 pages, 97293 bytes).
+PDF statistics:
+ 250 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-! Interruption.
-l.420363914 
-            
-? Q
-OK, e
