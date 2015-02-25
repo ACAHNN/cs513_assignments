@@ -679,5 +679,57 @@ Therefore the \(QR\) factorization of \(Z\) is
 \newpage
 \subsection{Question 5}
 
+\subsubsection{Part A}
 
-%\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../a1_q3.m}
+The formula to compute a Householder matrix \(H_i\) is \(H_i = I - 2ww'\).
+\(H_i\) is then multiplied by a matrix \(A_i\) to generate \(A_{i+1}\).
+The problem is the computation of \(A_{i+1}\) is \(O(m^{3})\).
+Therefore, we want to compute \(A_{i+1} = H_i A_i\) without explicitly calculating \(H_i\) first.
+This can be done by utilizing the formula for computing \(H_i\).
+
+\begin{eqnarray}
+  A_{i+1} &=& H_i A_i \\
+  &=& (I - 2ww')A_i \\
+  &=& I A_i  - 2ww'A_i \\
+  &=& A_i - 2ww' A_i \\
+  &=& \boxed{A_i - (2w)(w'A_i)}
+\end{eqnarray}
+
+This requires \(O(m^{2}\) operations because it only multiplies a matrix by a vector and a vector by a vector.
+Note, \(IA_i = A_i\) so this matrix multiplication is done implicitly and not explicitly.
+The intuition is made explicit below,
+
+\begin{eqnarray}
+  A_{i+1} &=& \underbrace{A_i}_{\text{mxm}} - \underbrace{(2w)}_{\text{mx1}}\underbrace{(w'A_i)}_{\text{1xn}}
+\end{eqnarray}
+
+The complexity of each operation in isolation is
+
+\begin{eqnarray}
+  IA_i \Rightarrow O(1) \\
+  2w \Rightarrow O(m) \\
+  w'A_i \Rightarrow O(m^{2}) \\
+  (2w)(w'A_i) \Rightarrow O(m^{2}) \\
+  A_i - ((2w)(w'A_i)) \Rightarrow O(m)
+\end{eqnarray}
+
+Therefore the complexity is dominated by the \(O(m^{2})\) terms and the complexity of the operation is \(O(m^{2})\).
+
+\newpage
+\subsubsection{Part B}
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../linear_qr.m}
+
+\subsubsection{Part C}
+
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q5_partC}
+
+\subsubsection{Part D}
+
+For a matrix \(A_{mxn}\), if we add the complexity of each line of the algorithm from (c) we have,
+
+\begin{eqnarray}
+  m+m+2m+2m^{2}+2m+2m^{2}+2m+m+m^{2}+m^{2} \\
+  \boxed{6m^{2}+9m}
+\end{eqnarray}
+
+Therefore, the complexity of the algorithm is \(O(m^{2})\).
