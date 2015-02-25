@@ -60,6 +60,8 @@ The spectral radius of \(A\) is,
   \boxed{p(A) = 2}
 \end{eqnarray}
 
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q1_partA}
+
 \subsubsection{Part B}
 \begin{eqnarray}
   || A ||_1 = \max \{2,4\} = \boxed{4} \\
@@ -95,6 +97,8 @@ The eigenvalues are simply the diagonal entries meaning,
   ||A||_2 &=& \sqrt{\max \{2,8\}} \\
   ||A||_2 &=& \boxed{\sqrt{8}}
 \end{eqnarray}
+
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q1_partB}
 
 \subsubsection{Part C}
 The left singular vectors of \(A\) are eigenvectors of \(AA'\); we will denote this \(U\).
@@ -203,7 +207,7 @@ Case: \(\lambda = 8 \),
   \end{bmatrix}
   = 0 \\
   \text{A solution: }
-  X = 
+  X =
   \begin{bmatrix}
     0 \\
     1
@@ -284,6 +288,9 @@ In full,
     0 & 1
   \end{bmatrix}
 \end{eqnarray}
+
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q1_partC}
+
 \newpage
 \subsection{Question 2}
 \subsubsection{Part A}
@@ -343,6 +350,8 @@ And the eigenvalues and eigenvectors for \(A'A\) are thus,
 Therefore, it is clear from this example that the eigenvectors for \(A\) and \(A'A\) are the same and the eigenvalues of \(A'A\) are the eigenvalues of \(A\) squared.
 The conjecture is thus, \((\lambda,v) \text{ is an eigenpair of } A'A \text{ if and only if} (\sqrt{\lambda},v) \text{ is an eigenpair of } A\); (for symmetric \(A\)).
 
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q2_partA}
+
 \subsubsection{Part B}
 
 Since \(A\) is a symmetric matrix we know that \(A\) can be decomposed to \(A = PDP^{-1}\). Where the columns of \(P\) are the eigenvectors of \(A\) and \(D\) is a diagonal matrix where the diaganol entries are the eigenvalues of \(A\).
@@ -386,6 +395,8 @@ The eigenvalues of \(B\) are \(-200\) and \(100\). Therefore, \(\sigma(B) = \{-2
 Using Matlab we find \(||B||_2 = 200\).
 Therefore, the theorem holds for \(B\).
 
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q2_partC}
+
 \subsubsection{Part D}
 
 This theorem does not hold for the non-symmetric matrix,
@@ -398,9 +409,11 @@ This theorem does not hold for the non-symmetric matrix,
   \end{bmatrix}
 \end{eqnarray}
 
-We find \(\sigma(C) = \{5.3723, -0.3723\}\) and \(p(C) = 5/3723\).
+We find \(\sigma(C) = \{5.3723, -0.3723\}\) and \(p(C) = 5.3723\).
 Using Matlab we find \(||C||_2 = 5.4650\).
 Therefore, the theorem does not hold for \(C\).
+
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q2_partD}
 
 \subsubsection{Part E}
 
@@ -426,13 +439,25 @@ The 'only if' portion follows by symmetry.
 
 \subsubsection{Part B}
 
-The 2-norm of \(A^{-1}\) should be 1 / ( the smalled singular value of \(A\)).
+The 2-norm of \(A^{-1}\) should be 1 / ( the smallest singular value of \(A\)).
 We will denote the singular values of \(A\) as \(s(A)\).
 Stated formally,
 
 \begin{eqnarray}
-  ||A^{-1}||_2 = \min \{\frac{1}{s_a} : s_a \in s(A) \}
+  ||A^{-1}||_2 = \max_{s_A \in s(A)} \{\frac{1}{s_a}\}
 \end{eqnarray}
+
+This is true because we know from (a) that \((\lambda,v)\) is an eigenpair for \(A\) if and only if \((\frac{1}{\lambda},v)\) is an eigenpair of \(A^{-1}\).
+Therefore, it must be the case that \((\lambda,v)\) is an eigenpair for \(A'A\) if and only if \((\frac{1}{\lambda},v)\) is an eigenpair of \(({A^{-1}})'A^{-1}\) because the 2-norm is preserved.
+Since the \(\lambda\)'s of \(A'A\) are the singular values of \(A\) it follows that \(\frac{1}{\lambda}\)'s of \(A'A\) are the singular values of \(A^{-1}\).
+Therefore, since \(||A||_2 = \max \{s(A)\}\),
+
+\begin{eqnarray}
+  ||A^{-1}||_2 = \max_{s_A \in s(A)} \{\frac{1}{s_a}\}
+\end{eqnarray}
+
+
+
 
 \newpage
 \subsection{Question 4}
@@ -653,7 +678,6 @@ Therefore the \(QR\) factorization of \(Z\) is
 
 \newpage
 \subsection{Question 5}
-
 
 
 %\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../a1_q3.m}

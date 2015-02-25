@@ -1,0 +1,14 @@
+norm(A,1)
+ans =
+
+     4
+
+norm(A,2)
+ans =
+
+    2.8284
+
+norm(A,inf)
+ans =
+
+     3
