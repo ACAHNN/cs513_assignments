@@ -1,0 +1,63 @@
+\newcommand{\mysection}[1]{\vspace{-.00cm}\section{#1}\vspace{-.00cm}}
+\newcommand{\mysubsection}[1]{\vspace{-.00cm}\subsection{#1}\vspace{-.00cm}}
+\newcommand{\mysubsubsection}[1]{\vspace{-.00cm}\subsubsection{#1}\vspace{-.00cm}}
+
+%\documentclass{acm_proc_article-sp}
+\documentclass[12pt]{article}
+
+\usepackage{multirow}
+\usepackage{times}
+\usepackage[scaled=0.92]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage[pdftex]{hyperref}
+\usepackage{url}
+\usepackage{fullpage}
+\usepackage{mathptmx}
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{subfig}
+\usepackage[noadjust]{cite}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[super]{nth}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{%
+  \parbox{\textwidth}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}\vskip-4pt}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{frame=lrb,xleftmargin=\fboxsep,xrightmargin=-\fboxsep}
+
+\begin{document}
+\title{Assignment 3 Solutions}
+\date{\today}
+
+%\numberofauthors{1}
+%\author{
+%\alignauthor Aaron Cahn\\
+%\affaddr{University of Wisconsin-Madison}\\
+%\email{cahn@cs.wisc.edu}
+%}
+
+
+\author{
+Aaron Cahn\\
+University of Wisconsin-Madison\\
+cahn@cs.wisc.edu
+}
+
+\maketitle
+
+\newpage
+\section{Solutions} \label{sec:solutions} \input{solutions}
+
+%\bibliographystyle{plain}
+%\bibliography{paper}
+
+\end{document}

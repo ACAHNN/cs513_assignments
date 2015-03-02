@@ -1,0 +1,10 @@
+% max/min for f(x)
+x(find(yi(x)==max(yi(x))))
+ans =
+
+   -0.5051    0.5051
+
+x(find(yi(x)==min(yi(x))))
+ans =
+
+   -1.7172    1.7172

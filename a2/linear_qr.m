@@ -31,4 +31,4 @@ b=rand(n(1),1);
 % n^2 operations
 y=Q'*b;
 % use back substitution n^2 operations
-y\R
+R\y
