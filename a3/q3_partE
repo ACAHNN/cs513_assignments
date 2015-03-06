@@ -1,0 +1,145 @@
+A = [1,2;-1,2];
+[P,D] = eig(A'*A);
+diag(D)
+
+ans =
+
+     2
+     8
+
+d
+{Undefined function or variable 'd'.
+} 
+D
+
+D =
+
+     2     0
+     0     8
+
+sqrt(diag(D))
+
+ans =
+
+    1.4142
+    2.8284
+
+singA = sqrt(diag(D))
+
+singA =
+
+    1.4142
+    2.8284
+
+max(singA)*max(1/singA)
+
+ans =
+
+     1
+
+cond(A,2)
+
+ans =
+
+    2.0000
+
+max(singA')*max(1/singA')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mrdivide')" style="font-weight:bold"> / </a>
+Matrix dimensions must agree.
+} 
+max(singA)
+
+ans =
+
+    2.8284
+
+a_norm = max(singA)
+
+a_norm =
+
+    2.8284
+
+inva_norm = max(1./singA)
+
+inva_norm =
+
+    0.7071
+
+a_norm*inva_norm
+
+ans =
+
+     2
+
+cond(A,2)
+
+ans =
+
+    2.0000
+
+A = [-92,144;144,-8];
+[P,D] = eig(A);
+singA = abs(diag(A));
+a_norm = max(singA)
+
+a_norm =
+
+    92
+
+inva_norm = max(1./singA)
+
+inva_norm =
+
+    0.1250
+
+a_norm*inva_norm
+
+ans =
+
+   11.5000
+
+cond(A,2)
+
+ans =
+
+    2.0000
+
+D
+
+D =
+
+ -200.0000         0
+         0  100.0000
+
+a_norm
+
+a_norm =
+
+    92
+
+singA = abs(diag(D));
+a_norm = max(singA)
+
+a_norm =
+
+   200
+
+inva_norm = max(1./singA)
+
+inva_norm =
+
+    0.0100
+
+a_norm*inva_norm
+
+ans =
+
+    2.0000
+
+cond(A,2)
+
+ans =
+
+    2.0000
+
+diary off
