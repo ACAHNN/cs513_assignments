@@ -100,6 +100,9 @@ From these plots we can see that a higher order polynomial is quite good at fitt
 This is apparent from the plots of \(\tan(\frac{x}{3})\) and \(x^{3}-5x^{2}+9\).
 However, the fit is less tight for \(|x-1|\), a function that has a point where it is not differentiable (e.g., in general, non-smooth functions).
 
+Note, the error norm is \(||p(T)-f(T)||_2\).
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q4_partD}
+
 \newpage
 \lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q4_partC}
 
@@ -137,10 +140,232 @@ This concludes the proof that \(A\) is symmetric.
 The proof that \(A\) is symmetric positive definite is complete.
 
 \subsubsection{Part B}
+
+We must find the \(LDU\) factorization of \(A\).
+To this end we will first find the \(LU\) factorization and then extract \(D\).
+
+\begin{eqnarray}
+  A =
+  \begin{bmatrix}
+    2 & 2 & 3 \\
+    2 & 4 & 5 \\
+    3 & 5 & 8
+  \end{bmatrix}
+\end{eqnarray}
+
+We must find the \(L\) matrices that transform \(A\) to \(U\).
+
+\begin{eqnarray}
+  L_1 &=& 
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    -1 & 1 & 0 \\
+    -1.5 & 0 & 1 \\
+  \end{bmatrix}
+  \\
+  A_1 &=&
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    -1 & 1 & 0 \\
+    -1.5 & 0 & 1 \\
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 & 2 & 3 \\
+    2 & 4 & 5 \\
+    3 & 5 & 8    
+  \end{bmatrix}
+  \\
+  A_1 &=&
+  \begin{bmatrix}
+    2 & 2 & 3 \\
+    0 & 2 & 2 \\
+    0 & 2 & 3 \\
+  \end{bmatrix}
+  \\
+  L_2 &=& 
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & -1 & 1 \\
+  \end{bmatrix}
+  \\
+  A_2 &=&
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & -1 & 1 \\
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 & 2 & 3 \\
+    2 & 4 & 5 \\
+    3 & 5 & 8    
+  \end{bmatrix}
+  \\
+  A_2 &=&
+  \begin{bmatrix}
+    2 & 2 & 3 \\
+    0 & 2 & 2 \\
+    0 & 0 & 1.5 \\
+  \end{bmatrix}
+\end{eqnarray}
+
+Now we gather the terms from \(L_1\) and \(L_2\) (flipping signs to obtain the inverse) for our matrix \(L\).
+The matrix \(U\) is simply \(A_2\).
+In total,
+
+\begin{eqnarray}
+  L =
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    1 & 1 & 0 \\
+    1.5 & 1 & 1 \\
+  \end{bmatrix}
+  U =
+  \begin{bmatrix}
+    2 & 2 & 3 \\
+    0 & 2 & 2 \\
+    0 & 0 & 1.5 \\
+  \end{bmatrix}
+\end{eqnarray}
+
+Now, we factor \(D\) from \(U\).
+We simply pull out the diagonal and scale each row of \(U\) by the diagonal element of \(D\).
+This changes \(U\) so we are left with,
+
+\begin{eqnarray}
+  L =
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    1 & 1 & 0 \\
+    1.5 & 1 & 1 \\
+  \end{bmatrix}
+  D =
+  \begin{bmatrix}
+    2 & 0 & 0 \\
+    0 & 2 & 0 \\
+    0 & 0 & 1.5 \\
+  \end{bmatrix}
+  U =
+  \begin{bmatrix}
+    1 & 1 & 1.5 \\
+    0 & 1 & 1 \\
+    0 & 0 & 1 \\
+  \end{bmatrix}
+\end{eqnarray}
+
 \subsubsection{Part C}
+
+The matrix \(A\) is positive definite.
+This is because all the diagonal entries in \(D\) are positive which suffices to prove a matrix is positive definite.
+
 \subsubsection{Part D}
+
+To find a Cholesky factorization of \(A\) we will use the \(LDU\) factorization.
+We will split \(D\) into two equal matrices by taking the square root's of the diagonal entries.
+Therefore,
+
+\begin{eqnarray}
+  A &=&
+  \underbrace{
+  \begin{bmatrix}
+    1 & 0 & 0 \\
+    1 & 1 & 0 \\
+    1.5 & 1 & 1 \\
+  \end{bmatrix}
+  \begin{bmatrix}
+    \sqrt{2} & 0 & 0 \\
+    0 & \sqrt{2} & 0 \\
+    0 & 0 & \sqrt{1.5} \\
+  \end{bmatrix}
+  }_{\text{C'}}
+  \underbrace{
+  \begin{bmatrix}
+    \sqrt{2} & 0 & 0 \\
+    0 & \sqrt{2} & 0 \\
+    0 & 0 & \sqrt{1.5} \\
+  \end{bmatrix}
+  \begin{bmatrix}
+    1 & 1 & 1.5 \\
+    0 & 1 & 1 \\
+    0 & 0 & 1 \\
+  \end{bmatrix}
+  }_{\text{C}}
+  \\
+  A &=&
+  \underbrace{
+  \begin{bmatrix}
+    1.4142 & 0 & 0 \\
+    1.4142 & 1.4142 & 0 \\
+    2.1213 & 1.4142 & 1.2247 \\
+  \end{bmatrix}
+  }_{\text{C'}}
+  \underbrace{
+  \begin{bmatrix}
+    1.4142 & 1.4142 & 2.1213 \\
+    0 & 1.4142 & 1.4142 \\
+    0 & 0 & 1.2247 \\
+  \end{bmatrix}
+  }_{\text{C}}
+\end{eqnarray}
+
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q5_partD}
 
 \newpage
 \subsection{Question 6}
 
-%\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q5_partC}
+The matrix \(A\) is singular.
+Note, this means this does not contradict the theorem that proves a solution is unique because we will solve an underdetermined system which gives us a free variable.
+We can find solutions to \(Ax=b\) through the normal equations solution.
+Therefore, we will solve \(A'Ax=A'b\).
+
+\begin{eqnarray}
+  A'Ax &=& A'b \\
+  LUx &=& A'b \\
+  Ly &=& A'b \\
+  y &=& L \setminus (A'b) \\
+  x &=& U \setminus x
+\end{eqnarray}
+
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q6}
+
+Now we will solve,
+
+\begin{eqnarray}
+  Ux &=& y \\
+  \begin{bmatrix}
+    90 & 108 & 126 \\
+    0 & -1.2 & -2.4 \\
+    0 & 0 & 0 \\
+  \end{bmatrix}
+  x &=&
+  \begin{bmatrix}
+    12 \\
+    -0.8 \\
+    0 \\
+  \end{bmatrix}
+\end{eqnarray}
+
+This is an underdetermined system so we set \(x_3 = c\) and solve.
+This yields \(x_2 = -2c + 0.6667\) and \(x_1 = c - 0.6667\).
+Now we simply choose three values for \(c\).
+
+\begin{eqnarray}
+  c = 1 \Rightarrow
+  \begin{bmatrix}
+     0.3333 \\
+    -1.3333 \\
+    1 \\
+  \end{bmatrix}
+  c = 2 \Rightarrow
+  \begin{bmatrix}
+    1.3333 \\
+    -3.3333 \\
+    2 \\
+  \end{bmatrix}
+  c = 3 \Rightarrow
+  \begin{bmatrix}
+    2.3333 \\
+    -5.3333 \\
+    3 \\
+  \end{bmatrix}
+\end{eqnarray}

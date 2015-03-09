@@ -1,0 +1,9 @@
+% Error norm for tan(x/3)
+norm((A*p')-f(T)',2)
+   5.5146e-04
+% Error norm for abs(x-1)
+norm((A*p')-f(T)',2)
+    0.2366
+% Error norm for x^3-5x^2+9
+norm((A*p')-f(T)',2)
+   1.6582e-14
