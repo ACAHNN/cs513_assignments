@@ -88,7 +88,20 @@ Thefore the formula, using the definition of \(s(A)\) from \ref{form:sasym}, is,
 
 \lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q4_partB.m}
 
+\newpage
 \subsubsection{Part C}
+
+\begin{figure}[th]
+  \centering
+\includegraphics[trim=10mm 70mm 10mm 70mm, width=1.0\textwidth]{../q4_plots}
+\end{figure}
+
+From these plots we can see that a higher order polynomial is quite good at fitting a lower order polynomial on a small range.
+This is apparent from the plots of \(\tan(\frac{x}{3})\) and \(x^{3}-5x^{2}+9\).
+However, the fit is less tight for \(|x-1|\), a function that has a point where it is not differentiable (e.g., in general, non-smooth functions).
+
+\newpage
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q4_partC}
 
 \newpage
 \subsection{Question 5}

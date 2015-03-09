@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  8 MAR 2015 23:39
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  9 MAR 2015 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -778,9 +778,25 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 89--89
 [][][][][][][] 
  []
 
-(../q4_partB.m) [8] [9])
+(../q4_partB.m) [8] <../q4_plots.pdf, id=271, 614.295pt x 794.97pt>
+File: ../q4_plots.pdf Graphic file (type pdf)
+
+<use ../q4_plots.pdf>
+Package pdftex.def Info: ../q4_plots.pdf used on input line 96.
+(pdftex.def)             Requested size: 469.75502pt x 334.2757pt.
+ [9 <../q4_plots.pdf>]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 104--104
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 104--104
+[][][][][][][] 
+ []
+
+(../q4_partC) [10] [11])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
- [10]
+ [12]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
  (./paper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
@@ -789,10 +805,10 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 36A64FD6F975AD68EA0FB25BA0C21B4E;1188.
  ) 
 Here is how much of TeX's memory you used:
- 10488 strings out of 493629
- 156469 string characters out of 3134964
- 293598 words of memory out of 3000000
- 13428 multiletter control sequences out of 15000+200000
+ 10542 strings out of 493629
+ 157204 string characters out of 3134964
+ 299598 words of memory out of 3000000
+ 13433 multiletter control sequences out of 15000+200000
  50314 words of font info for 86 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  44i,7n,45p,287b,1733s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -806,10 +822,10 @@ s.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/urw/times/utmb8a.p
 fb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (10 pages, 92197 bytes).
+Output written on paper.pdf (12 pages, 102242 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 174 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 410 PDF objects out of 1000 (max. 8388607)
+ 383 compressed objects within 4 object streams
+ 219 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
