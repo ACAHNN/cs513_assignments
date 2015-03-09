@@ -1,21 +1,15 @@
 x=linspace(-10,10);
 
 y=sym('x^2*exp(-3*x^2)+(x/40)^2')
- 
 y =
- 
 x^2*exp(-3*x^2) + x^2/1600
  
 dy=diff(y)
- 
 dy =
- 
 x/800 + 2*x*exp(-3*x^2) - 6*x^3*exp(-3*x^2)
  
 ddy=diff(dy)
- 
 ddy =
- 
 2*exp(-3*x^2) - 30*x^2*exp(-3*x^2) + 36*x^4*exp(-3*x^2) + 1/800
  
 yi=inline(y);

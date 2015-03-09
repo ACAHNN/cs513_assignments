@@ -1,0 +1,32 @@
+f = sym('tan(x/3)');
+f = inline(f);
+a=0; b=3; m=40;
+k=6;
+p = q4_partB(f,a,b,m,k);
+subplot(2,2,1);
+[Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL.
+For more information, click <a href="matlab:opengl('problems')">here</a>.] 
+T=linspace(a,b,m);
+plot(T,f(T));
+p = p(end:-1:1);
+A = q4_partA(T,k);
+plot(T,A\p');
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mldivide')" style="font-weight:bold"> \ </a>
+Matrix dimensions must agree.
+} 
+plot(T,A\p);
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mldivide')" style="font-weight:bold"> \ </a>
+Matrix dimensions must agree.
+} 
+size(p)
+
+ans =
+
+     1     7
+
+A\p
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mldivide')" style="font-weight:bold"> \ </a>
+Matrix dimensions must agree.
+} 
+plot(T,A*p')
+diary off

@@ -1,5 +1,4 @@
-function [A] = q4_partA(m,k,T)
-    base = meshgrid(T(1):T(k+1))';
-    j = meshgrid(1:k+1);
-    A = base.^(j-1);
+function [A] = q4_partA(T,k)
+    [exp,base]=meshgrid(0:k,T);
+    A=base.^exp;
 end

@@ -1,5 +1,6 @@
 m = size(A);
 L = {};
+
 for k=1:m-1
     L{k} = eye(m);
     for i=k+1:m
@@ -7,6 +8,5 @@ for k=1:m-1
         for j=k:m
             A(i,j)=A(i,j)-L{k}(i,k)*A(k,j);
         end
-        A
     end
 end
