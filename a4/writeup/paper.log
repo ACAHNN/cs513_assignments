@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  25 MAR 2015 16:31
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.9.8)  25 MAR 2015 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -702,42 +702,77 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 20.
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/psnfss/ts1ptm
 .fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)) [3] [4] [5] [6] [7] [8] [9] [10])
+)) [3]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 19--19
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 19--19
+[][][][][][][] 
+ []
+
+(../q1_partD.m)
+Overfull \hbox (6.0pt too wide) in paragraph at lines 20--20
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 20--20
+[][][][][][][] 
+ []
+
+(../q1_partD_results) [4]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 33--33
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 33--33
+[][][][][][][] 
+ []
+
+(../lu_basic.m) [5]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 46--46
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 46--46
+[][][][][][][] 
+ []
+
+(../lu_pivot.m) [6] [7])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
- [11]
+ [8]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
  (./paper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
-
-
-Package rerunfilecheck Warning: File `paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `paper.out':
-(rerunfilecheck)             Before: 9E9BFAA298FF35C8787B8734DE9FD911;876
-(rerunfilecheck)             After:  64D3726B8C84BEF7BC9B92AC63E950D0;942.
+Package rerunfilecheck Info: File `paper.out' has not changed.
+(rerunfilecheck)             Checksum: 3599344A7579B221A0AE042A0A432B88;1008.
  ) 
 Here is how much of TeX's memory you used:
- 10304 strings out of 493629
- 154137 string characters out of 3134964
- 283732 words of memory out of 3000000
- 13388 multiletter control sequences out of 15000+200000
+ 10423 strings out of 493629
+ 155714 string characters out of 3134964
+ 299749 words of memory out of 3000000
+ 13406 multiletter control sequences out of 15000+200000
  49403 words of font info for 83 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  44i,7n,45p,281b,1705s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/enc/dvips/base/
 8r.enc}</afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></afs/cs.wisc.edu/s/texlive-2011/am
-d64_rhel5/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></afs/cs.wisc.edu/s/texli
-ve-2011/amd64_rhel5/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></afs/cs.wisc.e
-du/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (11 pages, 62439 bytes).
+ic/amsfonts/cm/cmmi10.pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></afs/cs.wisc.edu/s/texlive-2011/am
+d64_rhel5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></afs/cs.wisc.ed
+u/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></afs/
+cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on paper.pdf (8 pages, 81940 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 55 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 144 named destinations out of 1000 (max. 500000)
+ 129 words of extra memory for PDF output out of 10000 (max. 10000000)
 

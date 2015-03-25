@@ -16,27 +16,43 @@ Therefore, the complexity of the symmetric \(LU\) factorization algorithm will b
 \newpage
 \subsubsection{Part D}
 
-\newpage
-\subsection{Question 2}
-\subsubsection{Part A}
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q1_partD.m}
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../q1_partD_results}
+
+It is clear from the results that the ratio between the run time of the symmetric \(LU\) factorization script over the Gauss elimination \(LU\) factorization script is converging to \(\frac{1}{2}\).
+This confirms the complexity predicted for symmetric \(LU\) factorization in part C of this question.
+Note, experiments were run on symmetric matrices with \(m \in \{30,40,50,60 \}\).
 
 \newpage
+\subsection{Question 2}
+
+\subsubsection{Part A}
+This code does the basic Gauss elimination \(LU\) factorization.
+It is the same code used in question 1 during the comparison to the symmetric \(LU\) factorization.
+
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../lu_basic.m}
+
 \subsubsection{Part B}
+As stated in the question, we simply use Matlab's lu routine to accomplish this algorithm.
+Note, Matlab's lu routine does partial pivoting.
 
 \newpage
 \subsubsection{Part C}
+
+This code does complete pivoting before Gauss elimination.
+The code returns [L,U,P,Q] where \(P\) and \(Q\) are permutation matrices.
+The algorithm produces matrices for the equation \(PAQ = LU\). 
+
+\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../lu_pivot.m}
+
+\subsubsection{Part D}
+
 
 \newpage
 \subsection{Question 3}
 \subsubsection{Part A}
-
-\newpage
 \subsubsection{Part B}
-
-\newpage
 \subsubsection{Part C}
-
-\newpage
 \subsubsection{Part D}
 
 
