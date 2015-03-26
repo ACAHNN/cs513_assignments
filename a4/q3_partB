@@ -1,0 +1,21 @@
+% The 2x2 deflated matrix
+tilA1 = A1(2:end,2:end)
+
+tilA1 =
+
+    9.0000   -6.0000
+    6.0000   -6.0000
+
+% The eigen values and eigen vectors
+[V,E] = eig(tilA1)
+
+V =
+
+    0.8944    0.4472
+    0.4472    0.8944
+
+
+E =
+
+    6.0000         0
+         0   -3.0000

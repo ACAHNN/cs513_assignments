@@ -1,0 +1,966 @@
+A=[309,228,-240;60,-117,510;12,6,298];
+v=[6 3 2]';
+lambda=(A*v)./v;
+lambda=lambda(1);
+e=[1 0 0]';
+w=e-v;
+w=w/norm(w);
+H=eye(3)-2*w*w';
+A1=H*A*H
+
+A1 =
+
+  288.7507  281.2188 -307.6787
+   69.0083  -72.3740  477.8560
+   10.6371   31.3296  273.6233
+
+A
+
+A =
+
+   309   228  -240
+    60  -117   510
+    12     6   298
+
+A=A./49;
+lambda=(A*v)./v;
+lamba=lambda(1);
+w=e-v;
+w=w/norm(w);
+w
+
+w =
+
+   -0.8111
+   -0.4867
+   -0.3244
+
+H=eye(3)-2*w*w'
+
+H =
+
+   -0.3158   -0.7895   -0.5263
+   -0.7895    0.5263   -0.3158
+   -0.5263   -0.3158    0.7895
+
+A1=H*A*H
+
+A1 =
+
+    5.8929    5.7392   -6.2792
+    1.4083   -1.4770    9.7522
+    0.2171    0.6394    5.5841
+
+v
+
+v =
+
+     6
+     3
+     2
+
+v=v/norm(v);
+w=e-v;
+w=w/norm(w);
+H=eye(3)-2*w*w'
+
+H =
+
+    0.8571    0.4286    0.2857
+    0.4286   -0.2857   -0.8571
+    0.2857   -0.8571    0.4286
+
+A1=H*A*H
+
+A1 =
+
+    7.0000   -0.0000    0.0000
+   -0.0000    9.0000   -6.0000
+   -0.0000    6.0000   -6.0000
+
+%part ii
+[P,D]=eig(A1(2:end,2:end))
+
+P =
+
+    0.8944    0.4472
+    0.4472    0.8944
+
+
+D =
+
+    6.0000         0
+         0   -3.0000
+
+% part iii
+v2=P(:,1)
+
+v2 =
+
+    0.8944
+    0.4472
+
+v3=P(:,2)
+
+v3 =
+
+    0.4472
+    0.8944
+
+x2=A1(1,2:end)
+
+x2 =
+
+   1.0e-14 *
+
+   -0.1998    0.2442
+
+l2=D(1,1)
+
+l2 =
+
+    6.0000
+
+l3=D(2,2)
+
+l3 =
+
+   -3.0000
+
+a2 = dot(x2,v2)/(lambda-l2)
+
+a2 =
+
+   1.0e-15 *
+
+         0   -0.6951         0
+
+w2 = [a2; v2]
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+Dimensions of matrices being concatenated are not consistent.
+} 
+w2 = [a2 v2]
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('horzcat')" style="font-weight:bold">horzcat</a>
+Dimensions of matrices being concatenated are not consistent.
+} 
+a2
+
+a2 =
+
+   1.0e-15 *
+
+         0   -0.6951         0
+
+v2
+
+v2 =
+
+    0.8944
+    0.4472
+
+w2 = [a2 v2']
+
+w2 =
+
+         0   -0.0000         0    0.8944    0.4472
+
+dot(x2,v2)
+
+ans =
+
+  -6.9511e-16
+
+lambda
+
+lambda =
+
+    7.0000
+    7.0000
+    7.0000
+
+lambda = lambda(1)
+
+lambda =
+
+    7.0000
+
+a2 = dot(x2,v2)/(lambda-l2)
+
+a2 =
+
+  -6.9511e-16
+
+w2 = [a2;v2]
+
+w2 =
+
+   -0.0000
+    0.8944
+    0.4472
+
+A*w2
+
+ans =
+
+    1.9714
+    2.5190
+    2.8293
+
+l2*w2
+
+ans =
+
+   -0.0000
+    5.3666
+    2.6833
+
+a2 = dot(x2,v2)/(l2-lambda)
+
+a2 =
+
+   6.9511e-16
+
+w2 = [a2;v2]
+
+w2 =
+
+    0.0000
+    0.8944
+    0.4472
+
+v2
+
+v2 =
+
+    0.8944
+    0.4472
+
+norm(v2)
+
+ans =
+
+     1
+
+l2*v2
+
+ans =
+
+    5.3666
+    2.6833
+
+A1
+
+A1 =
+
+    7.0000   -0.0000    0.0000
+   -0.0000    9.0000   -6.0000
+   -0.0000    6.0000   -6.0000
+
+tilA1=A1(2:end,2:end)
+
+tilA1 =
+
+    9.0000   -6.0000
+    6.0000   -6.0000
+
+[P,D]=eig(tilA1)
+
+P =
+
+    0.8944    0.4472
+    0.4472    0.8944
+
+
+D =
+
+    6.0000         0
+         0   -3.0000
+
+v2=P(:,1)
+
+v2 =
+
+    0.8944
+    0.4472
+
+l2=D(1,1)
+
+l2 =
+
+    6.0000
+
+l2*v2
+
+ans =
+
+    5.3666
+    2.6833
+
+tilA1*v2
+
+ans =
+
+    5.3666
+    2.6833
+
+A
+
+A =
+
+    6.3061    4.6531   -4.8980
+    1.2245   -2.3878   10.4082
+    0.2449    0.1224    6.0816
+
+[P1,D1]=eig(A)
+
+P1 =
+
+   -0.8571   -0.5111    0.4472
+   -0.4286    0.6389   -0.8944
+   -0.2857    0.5750    0.0000
+
+
+D1 =
+
+    7.0000         0         0
+         0    6.0000         0
+         0         0   -3.0000
+
+v
+
+v =
+
+    0.8571
+    0.4286
+    0.2857
+
+v2
+
+v2 =
+
+    0.8944
+    0.4472
+
+v3
+
+v3 =
+
+    0.4472
+    0.8944
+
+P
+
+P =
+
+    0.8944    0.4472
+    0.4472    0.8944
+
+x
+{Undefined function or variable 'x'.
+} 
+x2
+
+x2 =
+
+   1.0e-14 *
+
+   -0.1998    0.2442
+
+A1
+
+A1 =
+
+    7.0000   -0.0000    0.0000
+   -0.0000    9.0000   -6.0000
+   -0.0000    6.0000   -6.0000
+
+x2=A1(1,2:3)
+
+x2 =
+
+   1.0e-14 *
+
+   -0.1998    0.2442
+
+dot(x2,v2)
+
+ans =
+
+  -6.9511e-16
+
+dot(x2,v2)/(l2-lambda)
+
+ans =
+
+   6.9511e-16
+
+a2=dot(x2,v2)/(l2-lambda)
+
+a2 =
+
+   6.9511e-16
+
+w2=[a2;v2]
+
+w2 =
+
+    0.0000
+    0.8944
+    0.4472
+
+l2*w2
+
+ans =
+
+    0.0000
+    5.3666
+    2.6833
+
+A*w2
+
+ans =
+
+    1.9714
+    2.5190
+    2.8293
+
+A
+
+A =
+
+    6.3061    4.6531   -4.8980
+    1.2245   -2.3878   10.4082
+    0.2449    0.1224    6.0816
+
+A
+
+A =
+
+    6.3061    4.6531   -4.8980
+    1.2245   -2.3878   10.4082
+    0.2449    0.1224    6.0816
+
+lambda
+
+lambda =
+
+    7.0000
+
+v
+
+v =
+
+    0.8571
+    0.4286
+    0.2857
+
+e
+
+e =
+
+     1
+     0
+     0
+
+H
+
+H =
+
+    0.8571    0.4286    0.2857
+    0.4286   -0.2857   -0.8571
+    0.2857   -0.8571    0.4286
+
+Hv
+{Undefined function or variable 'Hv'.
+} 
+H*v
+
+ans =
+
+    1.0000
+    0.0000
+    0.0000
+
+H
+
+H =
+
+    0.8571    0.4286    0.2857
+    0.4286   -0.2857   -0.8571
+    0.2857   -0.8571    0.4286
+
+H'
+
+ans =
+
+    0.8571    0.4286    0.2857
+    0.4286   -0.2857   -0.8571
+    0.2857   -0.8571    0.4286
+
+A1
+
+A1 =
+
+    7.0000   -0.0000    0.0000
+   -0.0000    9.0000   -6.0000
+   -0.0000    6.0000   -6.0000
+
+A1*e
+
+ans =
+
+    7.0000
+   -0.0000
+   -0.0000
+
+A1
+
+A1 =
+
+    7.0000   -0.0000    0.0000
+   -0.0000    9.0000   -6.0000
+   -0.0000    6.0000   -6.0000
+
+A
+
+A =
+
+    6.3061    4.6531   -4.8980
+    1.2245   -2.3878   10.4082
+    0.2449    0.1224    6.0816
+
+x
+{Undefined function or variable 'x'.
+} 
+x2
+
+x2 =
+
+   1.0e-14 *
+
+   -0.1998    0.2442
+
+v2
+
+v2 =
+
+    0.8944
+    0.4472
+
+X2*v2
+{Undefined function or variable 'X2'.
+} 
+x2*v2
+
+ans =
+
+  -6.9511e-16
+
+w2
+
+w2 =
+
+    0.0000
+    0.8944
+    0.4472
+
+l2
+
+l2 =
+
+    6.0000
+
+l2*w2
+
+ans =
+
+    0.0000
+    5.3666
+    2.6833
+
+v2
+
+v2 =
+
+    0.8944
+    0.4472
+
+A
+
+A =
+
+    6.3061    4.6531   -4.8980
+    1.2245   -2.3878   10.4082
+    0.2449    0.1224    6.0816
+
+AB=A*49
+
+AB =
+
+  309.0000  228.0000 -240.0000
+   60.0000 -117.0000  510.0000
+   12.0000    6.0000  298.0000
+
+H*AB*H
+
+ans =
+
+  343.0000   -0.0000    0.0000
+   -0.0000  441.0000 -294.0000
+   -0.0000  294.0000 -294.0000
+
+H
+
+H =
+
+    0.8571    0.4286    0.2857
+    0.4286   -0.2857   -0.8571
+    0.2857   -0.8571    0.4286
+
+A
+
+A =
+
+    6.3061    4.6531   -4.8980
+    1.2245   -2.3878   10.4082
+    0.2449    0.1224    6.0816
+
+x2=A(1,2:end)
+
+x2 =
+
+    4.6531   -4.8980
+
+a2=dot(x2,v2)/(l2-lambda)
+
+a2 =
+
+   -1.9714
+
+w2=[a2;v2]
+
+w2 =
+
+   -1.9714
+    0.8944
+    0.4472
+
+l2*w2
+
+ans =
+
+  -11.8283
+    5.3666
+    2.6833
+
+A*w2
+
+ans =
+
+  -10.4604
+    0.1051
+    2.3465
+
+P1
+
+P1 =
+
+   -0.8571   -0.5111    0.4472
+   -0.4286    0.6389   -0.8944
+   -0.2857    0.5750    0.0000
+
+v
+
+v =
+
+    0.8571
+    0.4286
+    0.2857
+
+v=v*-1
+
+v =
+
+   -0.8571
+   -0.4286
+   -0.2857
+
+D1
+
+D1 =
+
+    7.0000         0         0
+         0    6.0000         0
+         0         0   -3.0000
+
+v
+
+v =
+
+   -0.8571
+   -0.4286
+   -0.2857
+
+e
+
+e =
+
+     1
+     0
+     0
+
+norm(v)
+
+ans =
+
+     1
+
+Hv
+{Undefined function or variable 'Hv'.
+} 
+H*v
+
+ans =
+
+   -1.0000
+   -0.0000
+   -0.0000
+
+w=e-v
+
+w =
+
+    1.8571
+    0.4286
+    0.2857
+
+w=w/norm(w)
+
+w =
+
+    0.9636
+    0.2224
+    0.1482
+
+H=eye(3)-2*w*w'
+
+H =
+
+   -0.8571   -0.4286   -0.2857
+   -0.4286    0.9011   -0.0659
+   -0.2857   -0.0659    0.9560
+
+H*A*H
+
+ans =
+
+    7.0000   -0.0000    0.0000
+    0.0000   -3.7811   11.3254
+    0.0000   -0.6746    6.7811
+
+A1
+
+A1 =
+
+    7.0000   -0.0000    0.0000
+   -0.0000    9.0000   -6.0000
+   -0.0000    6.0000   -6.0000
+
+AQ=H*A*H
+
+AQ =
+
+    7.0000   -0.0000    0.0000
+    0.0000   -3.7811   11.3254
+    0.0000   -0.6746    6.7811
+
+tilA=AQ(2:3,2:3)
+
+tilA =
+
+   -3.7811   11.3254
+   -0.6746    6.7811
+
+[P,D]=eig(tilA)
+
+P =
+
+   -0.9976   -0.7568
+   -0.0688   -0.6536
+
+
+D =
+
+   -3.0000         0
+         0    6.0000
+
+v2=P(:,1)
+
+v2 =
+
+   -0.9976
+   -0.0688
+
+l2=D(1,1)
+
+l2 =
+
+    -3
+
+l2*v2
+
+ans =
+
+    2.9929
+    0.2064
+
+tilA
+
+tilA =
+
+   -3.7811   11.3254
+   -0.6746    6.7811
+
+AQ
+
+AQ =
+
+    7.0000   -0.0000    0.0000
+    0.0000   -3.7811   11.3254
+    0.0000   -0.6746    6.7811
+
+x2=AQ(1,2:3)
+
+x2 =
+
+   1.0e-14 *
+
+   -0.0281    0.1293
+
+a2=dot(x2,v2)/(l2-lambda)
+
+a2 =
+
+  -1.9096e-17
+
+w2=[a2;v2]
+
+w2 =
+
+   -0.0000
+   -0.9976
+   -0.0688
+
+l2*w2
+
+ans =
+
+    0.0000
+    2.9929
+    0.2064
+
+q2_partD
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  6.840136e-19.] 
+[> In <a href="matlab: opentoline('/afs/cs.wisc.edu/u/c/a/cahn/private/cs513/cs513_assignments/a4/q2_partD.m',28,1)">q2_partD at 28</a>] 
+
+e1 =
+
+   3.5314e+03
+
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.217570e-18.] 
+[> In <a href="matlab: opentoline('/afs/cs.wisc.edu/u/c/a/cahn/private/cs513/cs513_assignments/a4/q2_partD.m',33,1)">q2_partD at 33</a>] 
+
+e2 =
+
+   1.0753e+03
+
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  1.837722e-19.] 
+[> In <a href="matlab: opentoline('/afs/cs.wisc.edu/u/c/a/cahn/private/cs513/cs513_assignments/a4/q2_partD.m',38,1)">q2_partD at 38</a>] 
+
+e3 =
+
+   3.0094e+03
+
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  7.014987e-21.] 
+[> In <a href="matlab: opentoline('/afs/cs.wisc.edu/u/c/a/cahn/private/cs513/cs513_assignments/a4/q2_partD.m',28,1)">q2_partD at 28</a>] 
+
+e1 =
+
+   2.2906e+17
+
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.119786e-32.] 
+[> In <a href="matlab: opentoline('/afs/cs.wisc.edu/u/c/a/cahn/private/cs513/cs513_assignments/a4/q2_partD.m',33,1)">q2_partD at 33</a>] 
+
+e2 =
+
+   6.2926e+15
+
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.826215e-33.] 
+[> In <a href="matlab: opentoline('/afs/cs.wisc.edu/u/c/a/cahn/private/cs513/cs513_assignments/a4/q2_partD.m',38,1)">q2_partD at 38</a>] 
+
+e3 =
+
+   3.7208e+13
+
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  3.642595e-34.] 
+[> In <a href="matlab: opentoline('/afs/cs.wisc.edu/u/c/a/cahn/private/cs513/cs513_assignments/a4/q2_partD.m',28,1)">q2_partD at 28</a>] 
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  8.429951e-34.] 
+[> In <a href="matlab: opentoline('/afs/cs.wisc.edu/u/c/a/cahn/private/cs513/cs513_assignments/a4/q2_partD.m',28,1)">q2_partD at 28</a>] 
+
+e1 =
+
+   3.1583e+16
+
+
+e2 =
+
+   8.2262e-14
+
+
+e3 =
+
+   9.9714e-14
+
+
+e1 =
+
+   1.4956e-10
+
+
+e2 =
+
+   2.0227e-11
+
+
+e3 =
+
+   4.6565e-12
+
+
+e1 =
+
+   1.0589e-10
+
+
+e2 =
+
+   7.3330e-12
+
+
+e3 =
+
+   4.8750e-12
+
+A
+
+A = 
+
+  Columns 1 through 6
+
+    [25x25 double]    [25x25 double]    [25x25 double]    [25x25 double]    [25x25 double]    [25x25 double]
+
+  Columns 7 through 10
+
+    [25x25 double]    [25x25 double]    [25x25 double]    [25x25 double]
+
+diary off

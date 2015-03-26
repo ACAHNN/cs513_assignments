@@ -7,7 +7,8 @@ function [L,U,P,Q] = lu_pivot(U)
     % for each row of U
     for k=1:m-1
         % find the max element in the sub-matrix
-        [xinds,yinds] = find(max(max(abs(U(k:m,k:m))))==abs(U(k:m,k:m)));
+        pivot = max(max(abs(U(k:m,k:m))));
+        [xinds,yinds] = find(pivot == abs(U(k:m,k:m)));
         
         % project back to the full matrix U
         x=xinds(1)+(k-1); y=yinds(1)+(k-1);
@@ -24,7 +25,7 @@ function [L,U,P,Q] = lu_pivot(U)
         for i=k+1:m
             % create the elemination value
             U(i,k)=U(i,k)/U(k,k);
-            % preform the elemination/update of all elements of row i
+            % update of upper diagonal elements of row i
             for j=k+1:m
                 U(i,j)=U(i,j)-U(i,k)*U(k,j);
             end

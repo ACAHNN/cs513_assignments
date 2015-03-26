@@ -1,4 +1,4 @@
-function [L,U] = lu_sym(U)
+function [L,U,t] = lu_sym(U)
     tic
     % get the dimension of the input matrix
     m = size(U);
@@ -23,5 +23,5 @@ function [L,U] = lu_sym(U)
     end
     % grab the upper triangular portion of U
     U = triu(U);
-    toc
+    t = toc;
 end

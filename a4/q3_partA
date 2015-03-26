@@ -1,0 +1,31 @@
+% The matrix to deflate
+A = [309,228,-240;60,-117,510;12,6,298]/49;
+
+% The eigen vector (normalized)
+v = [6 3 2]';
+v1 = v/norm(v);
+
+% The eigen value associated with v1
+l1=(A*v)./v;
+l1=l1(1);
+
+% Create the Housholder matrix
+e1=[1 0 0]';
+w = e1-v1;
+w1 = w/norm(w);
+H = eye(3)-2*w1*w1'
+
+H =
+
+    0.8571    0.4286    0.2857
+    0.4286   -0.2857   -0.8571
+    0.2857   -0.8571    0.4286
+
+% Deflate A to A1
+A1 = H*A*H
+
+A1 =
+
+    7.0000   -0.0000    0.0000
+   -0.0000    9.0000   -6.0000
+   -0.0000    6.0000   -6.0000
