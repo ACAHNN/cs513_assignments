@@ -116,23 +116,43 @@ This contrast grows as the size of the symmetric tridiagonal matrix grows.
 \newpage
 \subsection{Question 2}
 \subsubsection{Part A}
+
+Since the Gerschgorin's disks are pairwise disjoint we know that each disk must contain one eigenvalue.
+Therefore the cardinality of \(\sigma(A) = n\).
+This means that the algebraic multiplicity \(m_a\) of each eigenvalue is \(m_a = 1\).
+We know that the geometric multiplicity \(m_g\) follows the rule \(m_g \leq m_a\) for all eigenvalues of \(A\).
+Therefore, since \(m_a = 1\) we can say that \(m_g = 1\). 
+
 \subsubsection{Part B}
+
+Leon is correct because as stated above \(m_g = m_a\) for eigenvalues of \(A\).
+
+
 \subsubsection{Part C}
+
+Nina is correct because there are \(n\) eigenvalues; one per disk.
+If there was a complex eigenvalue it's complex conjugate would be an eigenvalue as well.
+This would require two eigenvalues to be loacted in a single disk.
+However this would contradict what we have shown in (a).
+Therefore all eigenvalues of \(A\) are real.
+
 \subsubsection{Part D}
+
+Elvis is not correct.
+The problem is that there can be two distinct eigenvalues in the real that have the same magnitude.
+For example, suppose a matrix \(B\) as eigenvalues \(\lambda_{1} = 6, \lambda_{2} = -6\).
+It is clear, \(|\lambda_{1}| = |\lambda_{2}|\).
+In this case the power method will not converge because there is no dominant eigenvalue.
 
 \newpage
 \subsection{Question 3}
 \subsubsection{Part A}
 \subsubsection{Part B}
-\subsubsection{Part C}
-\subsubsection{Part D}
 
 \newpage
 \subsection{Question 4}
 \subsubsection{Part A}
 \subsubsection{Part B}
-\subsubsection{Part C}
-\subsubsection{Part D}
 
 %\lstinputlisting[caption=Matlab Commands,showstringspaces=false,language=Matlab]{../lu_sym.m}
 
